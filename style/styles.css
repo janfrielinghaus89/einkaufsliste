@@ -1,0 +1,163 @@
+/* Globale Stile */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2ecc71; /* Hellgrüne Farbe */
+}
+
+/* Formular-Stile */
+form {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc; /* Durchgehende Linie */
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2ecc71; /* Hellgrüne Farbe */
+}
+
+select, input, button {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2ecc71; /* Hellgrüne Farbe */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60; /* Dunkleres Grün bei Hover */
+}
+
+/* Einkaufsliste-Stile */
+.shopping-item {
+    margin: 0 auto 20px; /* Abstand unten hinzugefügt und zentriert */
+    background-color: #fff; /* Weißer Hintergrund */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten für den schwebenden Effekt */
+    box-sizing: border-box; /* Padding und Border in die Berechnung der Breite einbeziehen */
+    text-align: center; /* Text zentrieren */
+    width: 100%; /* Breite auf 100% setzen */
+    max-width: 800px; /* Maximale Breite auf die gleiche wie der Container festlegen */
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Vollständige Breite für den Button-Container */
+}
+
+/* Neue Klasse für den Button-Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Buttons horizontal zentrieren */
+    margin-top: 10px; /* Abstand oben hinzugefügt */
+}
+
+/* Neue Stile für die Buttons */
+.delete-button,
+.done-button {
+    width: 100%; /* Breite auf 100% setzen */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button {
+    background-color: #ff4d4d; /* Rot für den Löschen-Button */
+    color: #fff; /* Textfarbe auf Weiß setzen */
+    margin-top: 10px; /* Abstand oben hinzugefügt */
+}
+
+.done-button {
+    background-color: #2ecc71; /* Grün für den Erledigt-Button */
+    color: #fff; /* Textfarbe auf Weiß setzen */
+    margin-top: 10px; /* Abstand oben hinzugefügt */
+}
+
+.delete-button:hover {
+    background-color: #b63737; /* Dunkleres Rot bei Hover */
+}
+
+.done-button:hover {
+    background-color: #27ae60; /* Dunkleres Grün bei Hover */
+}
+
+/* CSS-Animation für das Verschieben der erledigten Artikel */
+@keyframes moveDown {
+    from {
+      transform: translateY(-50px); /* Startposition über der aktuellen Position */
+      opacity: 0; /* Startwert für die Transparenz */
+    }
+    to {
+      transform: translateY(0); /* Endposition: Keine Verschiebung nach unten */
+      opacity: 1; /* Vollständig sichtbar */
+    }
+  }
+  
+  /* Neue Klasse für erledigte Artikel */
+  .done {
+      background-color: #f2f2f2; /* Helle graue Hintergrundfarbe für erledigte Artikel */
+      color: #888; /* Gedämpfter Grauton für den Text von erledigten Artikeln */
+      animation: moveDown 0.3s ease forwards; /* Verwende die moveDown-Animation mit einer Dauer von 0.3 Sekunden */
+  }
+  
+  /* CSS-Animation für das Löschen von Artikeln */
+@keyframes deleteItem {
+    0% {
+      transform: translateY(0); /* Startposition: Keine Verschiebung */
+    }
+    50% {
+      transform: translateY(-20px); /* Zwischenposition: Verschiebung nach oben */
+    }
+    100% {
+      transform: translateY(-50px); /* Endposition: Verschiebung nach oben */
+      opacity: 0; /* Endwert für die Transparenz: Unsichtbar */
+    }
+  }
+  
+  /* Neue Klasse für zu löschende Artikel */
+  .to-be-deleted {
+    animation: deleteItem 0.3s ease forwards; /* deleteItem-Animation mit einer Dauer von 0.3 Sekunden */
+  }
+
+/* Kategorienüberschriften zentrieren */
+.category {
+    text-align: center;
+}

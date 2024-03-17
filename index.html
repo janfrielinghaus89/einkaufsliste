@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einkaufsliste</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Einkaufsliste</h1>
+
+        <!-- Kategorienauswahl -->
+        <label for="categorySelect">Kategorie:</label>
+        <select id="categorySelect">
+            <option value="Alle">Alle Kategorien</option>
+            <option value="Tierische Produkte">Tierische Produkte</option>
+            <option value="Milchprodukte">Milchprodukte</option>
+            <option value="Beilagen">Beilagen</option>
+            <option value="Obst und Gemüse">Obst und Gemüse</option>
+            <option value="Sonstiges">Sonstiges</option>
+        </select>
+
+        <!-- Formular für Produkt und Menge -->
+        <form id="addItemForm">
+            <h2 class="form-title">Produkt hinzufügen</h2> <!-- Überschrift -->
+            <input type="text" id="itemInput" placeholder="Produkt">
+            <input type="number" id="quantityInput" placeholder="Menge">
+            <select id="unitSelect">
+                <option value="Stücke">Stück</option>
+                <option value="Gramm">Gramm</option>
+                <option value="Kilogramm">Kilogramm</option>
+                <option value="Liter">Liter</option>
+                <option value="Milliliter">Milliliter</option>
+            </select>
+            <button type="submit">Hinzufügen</button>
+        </form> <!-- Ende des Formulars -->
+
+    </div>
+
+    <!-- Einkaufsliste -->
+    <div id="shoppingList" class="shopping-list">
+        <!-- Hier werden die Einkaufsartikel dynamisch hinzugefügt -->
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
